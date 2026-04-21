@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Abhishek Panchal – Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --accent: #1A56DB;
+    --accent-light: #DBEAFE;
+    --dark: #111827;
+    --mid: #374151;
+    --muted: #6B7280;
+    --border: #E5E7EB;
+    --bg: #F9FAFB;
+    --white: #ffffff;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--dark);
+    font-size: 13px;
+    line-height: 1.55;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    max-width: 960px;
+    margin: 30px auto;
+    background: var(--white);
+    box-shadow: 0 4px 40px rgba(0,0,0,0.10);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 100%);
+    color: white;
+    padding: 36px 44px 28px;
+    text-align: center;
+    position: relative;
+  }
+  .header h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 38px;
+    letter-spacing: 0.5px;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+  .header .subtitle {
+    font-size: 13px;
+    color: #93C5FD;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  .contact-row {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    flex-wrap: wrap;
+  }
+  .contact-row a {
+    color: #BFDBFE;
+    text-decoration: none;
+    font-size: 12.5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.2s;
+  }
+  .contact-row a:hover { color: #fff; }
+  .contact-row .dot { color: #3B82F6; }
+
+  /* ── BODY GRID ── */
+  .body-grid {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    min-height: 600px;
+  }
+
+  /* ── LEFT COLUMN ── */
+  .left-col {
+    padding: 28px 32px;
+    border-right: 1px solid var(--border);
+  }
+
+  /* ── RIGHT COLUMN ── */
+  .right-col {
+    padding: 28px 26px;
+    background: #F8FAFF;
+  }
+
+  /* ── SECTION HEADER ── */
+  .sec-header {
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent-light);
+    padding-bottom: 5px;
+    margin-bottom: 14px;
+    margin-top: 22px;
+  }
+  .sec-header:first-child { margin-top: 0; }
+
+  /* ── SUMMARY ── */
+  .summary {
+    color: var(--mid);
+    font-size: 13px;
+    line-height: 1.65;
+    margin-bottom: 4px;
+  }
+
+  /* ── PROJECT ── */
+  .project + .project { margin-top: 20px; }
+  .project-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2px;
+  }
+  .project-name {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--dark);
+  }
+  .project-date {
+    font-size: 11.5px;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .project-stack {
+    font-size: 11.5px;
+    color: var(--accent);
+    font-style: italic;
+    margin-bottom: 6px;
+  }
+  .project ul {
+    padding-left: 16px;
+    color: var(--mid);
+  }
+  .project ul li {
+    margin-bottom: 4px;
+    font-size: 12.5px;
+  }
+  .project ul li strong { color: var(--dark); }
+
+  /* ── RIGHT COL STUFF ── */
+  .edu-school { font-weight: 600; font-size: 13.5px; color: var(--dark); }
+  .edu-deg { font-size: 12.5px; color: var(--mid); margin: 2px 0; }
+  .edu-meta { font-size: 12px; color: var(--muted); }
+
+  .skill-group { margin-bottom: 12px; }
+  .skill-label { font-weight: 600; font-size: 12px; color: var(--dark); margin-bottom: 3px; }
+  .skill-tags {
+    display: flex; flex-wrap: wrap; gap: 5px;
+  }
+  .tag {
+    background: var(--accent-light);
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 500;
+    padding: 2px 8px;
+    border-radius: 20px;
+  }
+
+  .dsa-stat { font-size: 12.5px; color: var(--mid); margin-bottom: 5px; }
+  .dsa-stat strong { color: var(--dark); }
+
+  .course-list { font-size: 12px; color: var(--mid); line-height: 1.7; }
+
+  @media print {
+    body { background: white; }
+    .page { margin: 0; box-shadow: none; border-radius: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>Abhishek Panchal</h1>
+    <p class="subtitle">Full Stack Developer &nbsp;·&nbsp; Data Science &amp; Applications</p>
+    <div class="contact-row">
+      <a href="tel:+918168250562">
+        <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        +91 8168250562
+      </a>
+      <span class="dot">·</span>
+      <a href="mailto:abhishek.working.mail@gmail.com">
+        <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        abhishek.working.mail@gmail.com
+      </a>
+      <span class="dot">·</span>
+      <a href="https://www.linkedin.com/in/abhishek-panchal-850609398/" target="_blank">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.57v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.33V9h3.43v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zm1.78 13.02H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .78 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .78 23.2 0 22.22 0z"/></svg>
+        LinkedIn
+      </a>
+      <span class="dot">·</span>
+      <a href="https://github.com/Abhishek8168" target="_blank">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.57v-2c-3.34.72-4.04-1.61-4.04-1.61-.55-1.38-1.34-1.75-1.34-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.05.13 3 .4 2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.93.43.37.82 1.1.82 2.22v3.29c0 .32.22.68.83.57C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        GitHub
+      </a>
+      <span class="dot">·</span>
+      <a href="https://leetcode.com/u/Abhishek_Panchal8168/" target="_blank">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></svg>
+        LeetCode
+      </a>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="body-grid">
+
+    <!-- LEFT -->
+    <div class="left-col">
+
+      <div class="sec-header">Summary</div>
+      <p class="summary">
+        Results-driven 3rd-year B.S. student in Data Science &amp; Applications at IIT Madras with hands-on experience building full-stack web applications. Developed production-quality systems using Flask, SQLAlchemy, Redis, and Celery. Proficient in Python, JavaScript, and SQL. Actively solving DSA problems on LeetCode. Passionate about scalable, data-driven software solutions across backend, frontend, and ML domains.
+      </p>
+
+      <div class="sec-header">Projects</div>
+
+      <div class="project">
+        <div class="project-title-row">
+          <span class="project-name">Placement Portal</span>
+          <span class="project-date">Jan 2026 – Apr 2026</span>
+        </div>
+        <div class="project-stack">Flask · SQLAlchemy · Flask-Security · Redis · Celery · React.js · SQLite</div>
+        <ul>
+          <li>Engineered a <strong>multi-role placement management system</strong> (Student, Company, Admin) with role-based access control using Flask-Security-Too and JWT authentication.</li>
+          <li>Built <strong>role-gated REST APIs</strong> using Flask-RESTful supporting full CRUD on placement drives, applications, and student profiles.</li>
+          <li>Integrated <strong>Celery + Redis</strong> for async background tasks: automated daily reminder emails and monthly placement reports via SMTP.</li>
+          <li>Implemented <strong>Flask-Caching</strong> to reduce repeated DB calls on high-traffic endpoints.</li>
+          <li>Designed real-time <strong>eligibility engine</strong> validating CGPA, branch, year-of-study, and backlogs before allowing students to apply.</li>
+          <li>Built a <strong>React.js frontend</strong> with dedicated Admin, Student, and Company dashboards with dynamic routing and component-based architecture.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="project-title-row">
+          <span class="project-name">EasyPark – Vehicle Parking App</span>
+          <span class="project-date">Jul 2025 – Aug 2025</span>
+        </div>
+        <div class="project-stack">Python · Flask · SQLAlchemy · SQLite · Jinja2 · CSS · JavaScript</div>
+        <ul>
+          <li>Built a <strong>full-stack parking management system</strong> with Admin and User portals supporting real-time spot booking, release, and occupancy tracking.</li>
+          <li>Designed a <strong>normalized relational schema</strong> (User, ParkingLot, ParkingSpot, Reservation) with cascade delete and ORM relationships using SQLAlchemy.</li>
+          <li>Implemented <strong>session-based authentication</strong>, dynamic form handling, and flash messaging for a clean user experience.</li>
+          <li>Created an <strong>admin analytics dashboard</strong> with visual spot-occupancy summaries across multiple parking lots using Chart.js.</li>
+          <li>Handled edge cases: duplicate lot detection, occupied-spot protection, and booking conflict resolution to ensure data integrity.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right-col">
+
+      <div class="sec-header">Education</div>
+      <div class="edu-school">IIT Madras</div>
+      <div class="edu-deg">B.S. in Data Science &amp; Applications</div>
+      <div class="edu-meta">3rd Year &nbsp;|&nbsp; CGPA: 7.31</div>
+      <div class="edu-meta" style="margin-top:2px">2023 – Present</div>
+
+      <div class="sec-header">Skills</div>
+
+      <div class="skill-group">
+        <div class="skill-label">Languages</div>
+        <div class="skill-tags">
+          <span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">SQL</span><span class="tag">HTML/CSS</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-label">Frameworks</div>
+        <div class="skill-tags">
+          <span class="tag">Flask</span><span class="tag">Flask-RESTful</span><span class="tag">Flask-Security</span><span class="tag">SQLAlchemy</span><span class="tag">React.js</span><span class="tag">Jinja2</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-label">Databases &amp; Infra</div>
+        <div class="skill-tags">
+          <span class="tag">SQLite</span><span class="tag">Redis</span><span class="tag">Celery</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-label">Concepts</div>
+        <div class="skill-tags">
+          <span class="tag">REST API</span><span class="tag">RBAC</span><span class="tag">MVC</span><span class="tag">Async Tasks</span><span class="tag">ORM</span><span class="tag">Email Automation</span><span class="tag">Caching</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-label">Tools</div>
+        <div class="skill-tags">
+          <span class="tag">Git</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Matplotlib</span>
+        </div>
+      </div>
+
+      <div class="sec-header">DSA & Problem Solving</div>
+      <p class="dsa-stat"><strong>LeetCode Progress:</strong> 35% overall completion</p>
+      <p class="dsa-stat" style="color:#6B7280; font-size:11.5px;">Arrays · Strings · Linked Lists · Trees · Hashing · Two Pointers · Sliding Window</p>
+
+      <div class="sec-header">Relevant Coursework</div>
+      <p class="course-list">
+        Database Management Systems<br>
+        Data Structures &amp; Algorithms<br>
+        Python Programming<br>
+        Statistics for Data Science<br>
+        Machine Learning Foundations<br>
+        Software Engineering
+      </p>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>
